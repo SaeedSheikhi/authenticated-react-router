@@ -13,7 +13,7 @@ $ yarn add authenticated-react-router
 
 ## Usage
 
-### AuthenticatedRouter
+### AuthenticatedRoute
 only allow authenticated (logged in) users to pass the route, particulary use for private routes such as profile section that need user to be logged in.
 
 
@@ -59,7 +59,7 @@ export default App;
 
 ```
 
-### UnuthenticatedRouter
+### UnuthenticatedRoute
 force logged in users redirect to pass this route, particulary use for login or register routes that logged in user doesn't need to see.
 
 
