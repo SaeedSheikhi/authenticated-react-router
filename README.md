@@ -1,7 +1,7 @@
 # authenticated-react-router
 
 an HOC for authenticated routes, manage your private and public routes easily.
-just replace Main Router component with AuthenticatedRouter or UnauthenticatedRouter components, see below for installation and use cases.
+just replace Main Route component with AuthenticatedRouter or UnauthenticatedRouter components, see below for installation and use cases.
 
 
 ## Installation
