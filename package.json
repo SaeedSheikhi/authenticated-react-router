@@ -1,0 +1,35 @@
+{
+  "name": "authenticated-react-router",
+  "version": "1.0.0",
+  "description": "an HOC for authenticated routes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaeedSheikhi/authenticated-react-router.git"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "peerDependencies": {
+    "react-router-dom": "^4.3.1"
+  },
+  "keywords": [
+    "react",
+    "react",
+    "router",
+    "authenticated",
+    "route",
+    "authenticate",
+    "security"
+  ],
+  "author": "Saeed Sheikhi SaeedSheikhi@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SaeedSheikhi/authenticated-react-router/issues"
+  },
+  "homepage": "https://github.com/SaeedSheikhi/authenticated-react-router#readme"
+}
