@@ -17,10 +17,38 @@ $ yarn add authenticated-react-router
 ```javascript
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import {
-  AuthenticatedRoute,
-  UnauthenticatedRoute
-} from "authenticated-react-router";
+import { AuthenticatedRoute } from "authenticated-react-router";
+//
+import Profile from "./components/Profile";
+import Login from "./components/Login";
+import Register from "./components/Register";
+
+class App extends Component {
+  render() {
+    return (
+      <section>
+        <AuthenticatedRoute
+          path={`/profile`}
+          redirect={`/login`}
+          isAuthenticated={this.props.isAuthenticated}
+          component={Profile}
+        />
+        <Route exact path={`$/search`} component={Search} />
+      </section>
+    );
+  }
+}
+
+export default App;
+
+```
+
+### UnuthenticatedRouter
+
+```javascript
+import React, { Component } from "react";
+import { Route } from "react-router-dom";
+import { UnauthenticatedRoute } from "authenticated-react-router";
 //
 import Profile from "./components/Profile";
 import Login from "./components/Login";
@@ -42,12 +70,7 @@ class App extends Component {
           redirect={`/profile`}
           component={Register}
         />
-        <AuthenticatedRoute
-          path={`/profile`}
-          isAuthenticated={this.props.isAuthenticated}
-          component={Profile}
-        />
-        <Route exact path={`${path}/search`} component={Search} />
+        <Route exact path={`/search`} component={Search} />
       </section>
     );
   }
@@ -56,10 +79,6 @@ class App extends Component {
 export default App;
 
 ```
-
-### UnuthenticatedRouter
-
-
 
 
 
