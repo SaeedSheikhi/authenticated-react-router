@@ -14,6 +14,22 @@ $ yarn add authenticated-react-router
 ## Usage
 
 ### AuthenticatedRouter
+only allow authenticated (logged in) users to pass the route, particulary use for private routes such as profile section that need user to be logged in.
+
+
+#### Props
+
+
+| Prop | Description |
+| ------ | ------ |
+| isAuthenticated | a boolean flag that show user is logged in or not |
+| redirect | if user was not logged in redirect user to this location, often is /login page |
+| path | Same as React-Router |
+| component | Same as React-Router |
+
+
+
+
 ```javascript
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
@@ -44,6 +60,18 @@ export default App;
 ```
 
 ### UnuthenticatedRouter
+
+
+
+#### Props
+
+
+| Prop | Description |
+| ------ | ------ |
+| isAuthenticated | a boolean flag that show user is logged in or not |
+| redirect | if user was logged in redirect user to this location, modules will automatically redirect user where he is came but for general purporse you must pass an generic url for example /profile page |
+| path | Same as React-Router |
+| component | Same as React-Router |
 
 ```javascript
 import React, { Component } from "react";
