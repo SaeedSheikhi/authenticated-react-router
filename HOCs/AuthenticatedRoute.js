@@ -8,7 +8,11 @@ const AuthenticatedRoute = ({ component: Component, ...rest }) => (
       rest.isAuthenticated ? (
         <Component {...props} />
       ) : (
-        <Redirect to={rest.redirect} />
+        <Redirect
+          to={`/${props.match.params.OSType}/auth/login?redirect=${
+            props.location.pathname
+          }`}
+        />
       )
     }
   />
