@@ -40,7 +40,7 @@ class App extends Component {
           path={`/register`}
           isAuthenticated={this.props.isAuthenticated}
           redirect={`/profile`}
-          component={Login}
+          component={Register}
         />
         <AuthenticatedRoute
           path={`/profile`}
@@ -54,7 +54,6 @@ class App extends Component {
 }
 
 export default App;
-
 
 ```
 
