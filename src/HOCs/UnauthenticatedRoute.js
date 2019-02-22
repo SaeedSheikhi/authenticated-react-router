@@ -1,6 +1,6 @@
 import React from "react";
 import queryString from "querystring";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, withRouter } from "react-router-dom";
 
 const UnauthenticatedRoute = ({ component: Component, ...rest }) => {
   const query = queryString.parse(rest.location.search.substring(1));
@@ -19,4 +19,4 @@ const UnauthenticatedRoute = ({ component: Component, ...rest }) => {
   );
 };
 
-export default UnauthenticatedRoute;
+export default withRouter(UnauthenticatedRoute);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, withRouter } from "react-router-dom";
 
 const AuthenticatedRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -8,14 +8,10 @@ const AuthenticatedRoute = ({ component: Component, ...rest }) => (
       rest.isAuthenticated ? (
         <Component {...props} />
       ) : (
-        <Redirect
-          to={`/${props.match.params.OSType}/auth/login?redirect=${
-            props.location.pathname
-          }`}
-        />
+        <Redirect to={`${rest.redirect}?redirect=${props.location.pathname}`} />
       )
     }
   />
 );
 
-export default AuthenticatedRoute;
+export default withRouter(AuthenticatedRoute);

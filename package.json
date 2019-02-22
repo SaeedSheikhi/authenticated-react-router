@@ -1,6 +1,6 @@
 {
   "name": "authenticated-react-router",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "an HOC for managing authenticated routes in react-router",
   "main": "build/index.js",
   "scripts": {
