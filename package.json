@@ -1,10 +1,12 @@
 {
   "name": "authenticated-react-router",
-  "version": "1.1.2",
-  "description": "an HOC for authenticated routes",
-  "main": "index.js",
+  "version": "1.2.0",
+  "description": "an HOC for managing authenticated routes in react-router",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -12,10 +14,20 @@
   },
   "dependencies": {
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "webpack": "^2.6.1"
   },
   "peerDependencies": {
     "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
   },
   "keywords": [
     "react",
