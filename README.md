@@ -60,7 +60,7 @@ export default App;
 ```
 
 ### UnuthenticatedRouter
-
+force logged in users redirect to pass this route, particulary use for login or register routes that logged in user doesn't need to see.
 
 
 #### Props
