@@ -1904,14 +1904,12 @@ var AuthenticatedRoute = function AuthenticatedRoute(_ref) {
 
   return _react2.default.createElement(_reactRouterDom.Route, _extends({}, rest, {
     render: function render(props) {
-      return rest.isAuthenticated ? _react2.default.createElement(Component, props) : _react2.default.createElement(_reactRouterDom.Redirect, {
-        to: "/" + props.match.params.OSType + "/auth/login?redirect=" + props.location.pathname
-      });
+      return rest.isAuthenticated ? _react2.default.createElement(Component, props) : _react2.default.createElement(_reactRouterDom.Redirect, { to: rest.redirect + "?redirect=" + props.location.pathname });
     }
   }));
 };
 
-exports.default = AuthenticatedRoute;
+exports.default = (0, _reactRouterDom.withRouter)(AuthenticatedRoute);
 
 /***/ }),
 /* 23 */
@@ -1953,7 +1951,7 @@ var UnauthenticatedRoute = function UnauthenticatedRoute(_ref) {
   }));
 };
 
-exports.default = UnauthenticatedRoute;
+exports.default = (0, _reactRouterDom.withRouter)(UnauthenticatedRoute);
 
 /***/ }),
 /* 24 */
